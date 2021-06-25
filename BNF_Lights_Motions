@@ -1,0 +1,5 @@
+<reflector> ::- <encendido> | <apagado>
+<fuente_agua> ::- <encendido> | <apagado>
+<encendido> ::- <color_luz>|<encendido><color_luz>
+<apagado> ::- false
+<color_luz> ::- Rojo|Verde|Azul|Amarillo
