@@ -3,6 +3,9 @@
 <encendido> ::- <color_luz>|<encendido><color_luz>
 <apagado> ::- false
 <color_luz> ::- Rojo|Verde|Azul|Amarillo
-agua
-
-
+<intensidad> ::- <lúmen> | <PSI>
+<lúmen> ::- <flotante> lm
+<flotante> ::- <entero> . <entero>
+<entero> ::- <digito>|<entero><dígito>
+<dígito> ::- 0|1|2|3|4|5|6|7|8|9
+<PSI> ::- <flotante> pulgadas^2
