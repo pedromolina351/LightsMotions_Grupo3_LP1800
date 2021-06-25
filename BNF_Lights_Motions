@@ -3,5 +3,6 @@
 <encendido> ::- <color_luz>|<encendido><color_luz>
 <apagado> ::- false
 <color_luz> ::- Rojo|Verde|Azul|Amarillo
+agua
 
 
