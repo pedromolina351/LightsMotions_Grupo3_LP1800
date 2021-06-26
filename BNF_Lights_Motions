@@ -2,7 +2,11 @@
 <fuente_agua> ::- <encendido> | <apagado>
 <encendido> ::- <color_luz>|<encendido><color_luz>
 <apagado> ::- false
-<color_luz> ::- Rojo|Verde|Azul|Amarillo
+<color_luz> ::- <Rojo>|<Verde>|<Azul>|<Amarillo>
+<Azul>::-<#0000FF>
+<Verde>::-<#008000>
+<Rojo>::-<#FF0000>
+<Amarillo>::-<#FFFF00>
 <intensidad> ::- <lúmen> | <PSI>
 <lumen>::-<valor> "lm"
 <valor>::-<signo><flotante>|<signo><entero>
