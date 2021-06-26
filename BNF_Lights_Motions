@@ -4,8 +4,21 @@
 <apagado> ::- false
 <color_luz> ::- Rojo|Verde|Azul|Amarillo
 <intensidad> ::- <lúmen> | <PSI>
-<lúmen> ::- <flotante> lm
-<flotante> ::- <entero> . <entero>
+<lumen>::-<valor> "lm"
+<valor>::-<signo><flotante>|<signo><entero>
+<signo>::- |+|-
+<flotante>::-<entero>.<entero>|<flotante><entero>
 <entero> ::- <digito>|<entero><dígito>
 <dígito> ::- 0|1|2|3|4|5|6|7|8|9
-<PSI> ::- <flotante> pulgadas^2
+<PSI> ::- <valor> "pulgadas^2"
+
+<decision>::- "si"<condicion><instruccion>"fin"|"si"<condicion><instruccion>"sino"<instruccion>"fin"
+<condicion>::-<valor_1><signo_condicional><valor_2>
+<signo_condicional>::- |>|>=|=|<|<=
+<valor_1>::-<valor>
+<valor_2>::-<valor>
+<instruccion>::-<cambiar_intencidad>|<pausa>
+<cambiar_intencidad>::<aumentar>|<disminuir>
+<aumetar>::-<intencidad> = <valor>+<valor>
+<disminuir>::-<intencidad> = <valor>-<valor>
+<pausar>::-<reflector><apagado>|<Fuente><apagado>
