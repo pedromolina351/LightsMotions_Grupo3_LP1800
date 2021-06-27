@@ -28,3 +28,8 @@
 <aumetar>::-<intencidad> = <valor>+<valor>
 <disminuir>::-<intencidad> = <valor>-<valor>
 <pausar>::-<reflector><apagado>|<Fuente><apagado>
+
+//ESTRUCTURA DE CICLOS
+<ciclos> ::- <repetir> | <mientras>
+<repetir> ::- "repetir" <instruccion> "hasta" <condicion>
+<mientras> ::- "mientras" <condicion> "repetir" <instruccion>
