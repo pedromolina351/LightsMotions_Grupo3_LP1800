@@ -1,3 +1,4 @@
+//CONTROLA EL ENCENDIDO Y APAGADO DE REFLECTORES Y FUENTES DE AGUA
 <reflector> ::- <encendido> | <apagado>
 <fuente_agua> ::- <encendido> | <apagado>
 <encendido> ::- <color_luz>|<encendido><color_luz>
@@ -16,6 +17,7 @@
 <dígito> ::- 0|1|2|3|4|5|6|7|8|9
 <PSI> ::- <valor> "pulgadas^2"
 
+//ESTRUCTURA DE DESICIONES
 <decision>::- "si"<condicion><instruccion>"fin"|"si"<condicion><instruccion>"sino"<instruccion>"fin"
 <condicion>::-<valor_1><signo_condicional><valor_2>
 <signo_condicional>::- |>|>=|=|<|<=
