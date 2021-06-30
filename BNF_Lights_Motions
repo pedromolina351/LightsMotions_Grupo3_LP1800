@@ -1,6 +1,6 @@
 //LEER CADENA DE CARACTERES
-<cadena>::- <letra>|<cadena><letra>
-<letra>::- a| b| c| d| e| f| g| h| i| j| k| l| m| n| ñ| o| p| q| r| s| t| u| v| w| x| y| z| A| B| C| D| E| F| G| H| I| J| K| L| M| N| Ñ| O| P| Q| R| S| T| U| V| W| X| Y| Z
+<cadena> ::- <letra>|<cadena><letra>
+<letra> ::- a| b| c| d| e| f| g| h| i| j| k| l| m| n| ñ| o| p| q| r| s| t| u| v| w| x| y| z| A| B| C| D| E| F| G| H| I| J| K| L| M| N| Ñ| O| P| Q| R| S| T| U| V| W| X| Y| Z
 
 //CONTROLA EL ENCENDIDO Y APAGADO DE REFLECTORES Y FUENTES DE AGUA
 <reflector> ::- <encendido> | <apagado>
@@ -8,30 +8,30 @@
 <encendido> ::- <color_luz>|<encendido><color_luz>
 <apagado> ::- false
 <color_luz> ::- <Rojo>|<Verde>|<Azul>|<Amarillo>
-<Azul>::-<#0000FF>
-<Verde>::-<#008000>
-<Rojo>::-<#FF0000>
-<Amarillo>::-<#FFFF00>
+<Azul> ::- <#0000FF>
+<Verde> ::- <#008000>
+<Rojo> ::- <#FF0000>
+<Amarillo> ::- <#FFFF00>
 <intensidad> ::- <lúmen> | <PSI>
-<lumen>::-<valor> "lm"
-<valor>::-<signo><flotante>|<signo><entero>
-<signo>::- |+|-
-<flotante>::-<entero>.<entero>|<flotante><entero>
+<lumen> ::- <valor> "lm"
+<valor> ::- <signo><flotante>|<signo><entero>
+<signo> ::- +|-
+<flotante> ::- <entero>.<entero>|<flotante><entero>
 <entero> ::- <digito>|<entero><dígito>
 <dígito> ::- 0|1|2|3|4|5|6|7|8|9
 <PSI> ::- <valor> "pulgadas^2"
 
 //ESTRUCTURA DE DESICIONES
-<decision>::- "si"<condicion><instruccion>"fin"|"si"<condicion><instruccion>"sino"<instruccion>"fin"
-<condicion>::-<valor_1><signo_condicional><valor_2>
-<signo_condicional>::- |>|>=|=|<|<=
-<valor_1>::-<valor>
+<decision> ::- "si"<condicion><instruccion>"fin"|"si"<condicion><instruccion>"sino"<instruccion>"fin"
+<condicion> ::- <valor_1><signo_condicional><valor_2>
+<signo_condicional> ::- |>|>=|=|<|<=
+<valor_1> ::- <valor>
 <valor_2>::-<valor>
-<instruccion>::-<cambiar_intencidad>|<pausa>
-<cambiar_intencidad>::<aumentar>|<disminuir>
-<aumetar>::-<intencidad> = <valor>+<valor>
-<disminuir>::-<intencidad> = <valor>-<valor>
-<pausar>::-<reflector><apagado>|<Fuente><apagado>
+<instruccion> ::- <cambiar_intencidad>|<pausa>
+<cambiar_intensidad> ::- <aumentar>|<disminuir>
+<aumetar> ::- <intensidad> = <valor>+<valor>
+<disminuir> ::- <intensidad> = <valor>-<valor>
+<pausar> ::- <reflector><apagado>|<Fuente><apagado>
 
 //ESTRUCTURA DE CICLOS
 <ciclos> ::- <repetir> | <mientras>
