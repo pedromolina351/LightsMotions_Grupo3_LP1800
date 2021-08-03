@@ -9,7 +9,12 @@ int main(){
 	int j=0;
 	int letra;
 	int simbolo;
-	
+	enum TEstados{r0,r1,r2,r3,r4,re} Estado;
+	Estado r0;
+	char cadena;
+	int longitud=0;
+	bool EsNumero;
+	EsNumero= false;
 	
 	printf("Ingrese las Instrucciones");
 	
@@ -30,4 +35,71 @@ int main(){
 				j++;
 			};
 	}	
+	int iterador=0;
+	while(iterador<= j&& Estado!=re){
+	    switch(Estado){
+	        
+	        case r0:
+	        if(strcmp(instruccion[iterador],"Encendido")== 0 || strcmp(Instruccion[iterador],"encendido") == 0 || strcmp(Instruccion[iterador],"Encender") == 0) {
+	          Estado=r1;
+	            
+	        }
+	        else{
+	            Estado=re;
+	            break;
+	        }
+	        break
+	    
+	        case r1:
+	        if(strcmp(instruccion[iterador],"verde")==0 || strcmp(instruccion[iterador],"rojo")==0|| strcmp(instruccion[iterador],"azul")==0 || strcmp(instruccion[iterador],"amarillo")==0 ){
+	            
+	            Estado = r1;
+	        }
+	        else{
+	            Estado=r2;
+	        }
+	        break
+	        
+	        case r2:
+	        	if (Instruccion[iterador-1][0] == '+' || Instruccion[iterador-1][0] == '-') {
+					Estado = r3;
+		
+				}
+		
+				else {
+					Estado = re;
+		    	break;
+				}
+				break;
+				
+		    case r3:
+		    cadena =Instruccion[iterador-1];
+		    longitud= strlen (instruccion[iterador-1]);
+		    int k=0;
+		    while(k< longitud){
+		        simbolo=cadena[k];
+		        EsNumero= (simbolo>=0 && simbolo<=9);
+		        k++;
+		        
+		    }
+		       	if (EsNumero == true || EsNumero==0) {
+		        Estadpo=r3;
+		    }
+		    else{
+		        Estado=re;
+		    }
+		    iterador=11;
+	    }
+	    iterador++;
+	    
+	}
+		if (Estado == r3 && EsNumero == 0) {
+		printf("la cadena es valida. ");
+	}
+	else {
+		printf("la cadena no es valida. ");
+	}
+	
+	return 0;
+	
 }
