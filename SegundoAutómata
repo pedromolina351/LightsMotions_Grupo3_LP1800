@@ -69,10 +69,38 @@ int main(){
 					Estado = fe;
 				};
 				break;
+				
+				case f4:
+				
+				
+				while(Instruccion[iterador-1][k] != '\0'){
+					EsNumero = (Instruccion[iterador-1][k] >= 0 && Instruccion[iterador-1][k] <= 9);
+					k++;	
+				}
+				if (EsNumero == true || EsNumero==0) {
+				Estado = f4;
+				}
+				else{
+					Estado = fe;
+				};
+				iterador = 11;
+				break;
+				
+		
+		}
 			
 			
 			}
 		iterador ++;
 		}
+		
+		if (Estado == f4 && EsNumero == 0) {
+		printf("la cadena es valida. ");
+	         }
+	       else {
+		printf("la cadena no es valida. ");
+	       }
+	
+	return 0;
 	  
 }
